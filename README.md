@@ -63,7 +63,7 @@ In this lab we are going to use Ansible 2.5.4 release.
 
 The picture below describes the main Ansible terminology:
 
-![](image3.png)
+![](imgs/imgs/image3.png)
 
 Ansible provides off-the-shelf modules to manage a variety of servers,
 application and network devices. In this lab we are going to mainly use
@@ -102,7 +102,7 @@ auto@automation:~/ ansible --version
 
 You should see the following:
 
-![](image4.png)
+![](imgs/imgs/image4.png)
 
 ## Environment setup
 
@@ -203,7 +203,7 @@ Where:
 
 You should see the following:
 
-![](image5.png)
+![](imgs/imgs/image5.png)
 
 ## Ansible Documentation
 
@@ -220,7 +220,7 @@ auto@automation:~/python/ansible$ ansible-doc ios_config
 ```
 You should see the following:
 
-![](image6.png)
+![](imgs/image6.png)
 
 The documentation tool provides a description of the given module, all
 the mandatory and optional parameters, as well as some useful examples
@@ -272,7 +272,7 @@ Save the file as **z:\\ansible\\vrf.yaml**
 Sublime will autodetect the YAML format and display the file like in the
 picture below:
 
-![](image7.png)
+![](imgs/image7.png)
 
 If the colors do not match those shown in the screen shot, most likely
 something is wrong with the file indentation. Double check before
@@ -316,7 +316,7 @@ SSH password: Cisco123
 
 You should see the following:
 
-![](image8.png)
+![](imgs/image8.png)
 
 Let’s quickly analyze the output:
 
@@ -382,7 +382,7 @@ Save the file as **z:\\ansible\\config.yaml**
 
 You should see the following:
 
-![](image9.png)
+![](imgs/image9.png)
 
 The first task configures a given list of NTP servers and the second
 task an extended ACL.
@@ -448,7 +448,7 @@ Save the file as z:\\ansible\\commands.yaml
 
 You should see the following:
 
-![](image10.png)
+![](imgs/image10.png)
 
 In the Playbook above we have only one task to execute two IOS XE exec
 commands.
@@ -462,7 +462,7 @@ SSH password:  Cisco123
 ```
 You should see the following:
 
-![](image11.png)
+![](imgs/image11.png)
 
 The Playbook was executed successfully (OK=1) but…where is the CLI
 output???
@@ -475,7 +475,7 @@ auto@automation:~/python/ansible$ ansible-playbook commands.yaml -u admin -k -v
 
 You should see the CLIs output like in the figure below.
 
-![](image12.png)
+![](imgs/image12.png)
 
 If you check the output carefully, you’ll see that the output is stored
 in two variables named **stdout** and **stdout\_lines**. The first
@@ -530,7 +530,7 @@ Save the file as **z:\\ansible\\netconf-description.yaml**
 
 You should see the following:
 
-![](image13.png)
+![](imgs/image13.png)
 
 -   In this playbook we are using “**vars**” to define
     ansible\_connection and ansible\_network\_os to use locally instead
@@ -551,7 +551,7 @@ on gi1/0/1 have been applied.
 
 You should see the following output:
 
-![](image14.png)
+![](imgs/image14.png)
 
 Step 3.  To configure telemetry subscriptions using NETCONF, on the Windows
     host, open **Sublime Text** from the Start menu, create a new file
@@ -613,7 +613,7 @@ Save the file as **z:\\ansible\\Telemetry.yaml**
 
 You should see the following:
 
-![](image15.png)
+![](imgs/image15.png)
 
 Step 4.  Now run the playbook in the Ubuntu Server with the following command
     and provide the password **Cisco123**:
@@ -628,7 +628,7 @@ on gi1/0/1 have been applied.
 
 You should see the following output:
 
-![](image16.png)
+![](imgs/image16.png)
 
 ## Build a Playbook for upgrade on IOS XE switches
 
@@ -690,7 +690,7 @@ Save the file as **z:\\ansible\\switch\_upgrade.yaml**
 
 You should see the following:
 
-![](upgrade.png)
+![](imgs/upgrade.png)
 
 Now run the playbook on the ubuntu server and the whole process will
 take around 20 minutes for copying the file from ubuntu to the switch
